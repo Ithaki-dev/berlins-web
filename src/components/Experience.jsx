@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 
+const img = (filename) => `${import.meta.env.BASE_URL}assets/img/${filename}`;
+
 const Experience = () => {
   const features = [
     {
@@ -51,7 +53,7 @@ const Experience = () => {
                 className="relative overflow-hidden clip-corner shadow-2xl border-2 border-accent-500/30"
               >
                 <img
-                  src="Building.png"
+                  src={img('Building.png')}
                   alt="Interior del restaurante Berlín's"
                   className="w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 />
