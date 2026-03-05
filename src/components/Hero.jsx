@@ -28,11 +28,12 @@ const Hero = () => {
         <div
           className="w-full h-[120vh] bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=2000&h=1200&fit=crop')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=2000&h=1200&fit=crop')`,
           }}
         />
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black" />
+        {/* Dark Overlay with noise texture */}
+        <div className="absolute inset-0 bg-gradient-to-b from-dark-500/80 via-dark-500/60 to-dark-500 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-noise opacity-20" />
       </motion.div>
 
       {/* Content */}
@@ -50,30 +51,31 @@ const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-gold-500 text-sm md:text-base tracking-[0.3em] uppercase mb-6 font-light"
+              className="text-accent-500 text-sm md:text-base tracking-[0.4em] uppercase mb-6 font-bold font-mono"
             >
-              Tradición Alemana en México
+              /// BERLÍN'S ///
             </motion.p>
 
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="heading-xl mb-6 text-white leading-tight"
+              className="heading-xl mb-6 text-white leading-none"
             >
-              Auténtica Experiencia
+              COMIDA
               <br />
-              <span className="text-gold-500">Alemana</span> en Cada Plato
+              <span className="text-accent-500 text-stroke">ALEMANA</span>
+              <br />
+              <span className="text-white">REBELDE</span>
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed"
+              className="text-white/80 text-base md:text-lg max-w-2xl mx-auto mb-12 leading-relaxed uppercase tracking-wide font-mono"
             >
-              Descubre los sabores tradicionales de Alemania en un ambiente elegante y acogedor.
-              Una experiencia culinaria que conecta culturas.
+              [ AUTÉNTICO · UNDERGROUND · SIN FILTROS ]
             </motion.p>
 
             <motion.div
@@ -86,7 +88,7 @@ const Hero = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection('#menu')}
-                className="btn-primary text-base md:text-lg"
+                className="btn-primary text-base"
               >
                 Ver Menú
               </motion.button>
@@ -95,9 +97,9 @@ const Hero = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection('#reservas')}
-                className="btn-secondary text-base md:text-lg"
+                className="btn-outline text-base"
               >
-                Reservar Mesa
+                Reservar
               </motion.button>
             </motion.div>
           </motion.div>
