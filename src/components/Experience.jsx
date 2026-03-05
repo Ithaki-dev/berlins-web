@@ -4,35 +4,35 @@ const Experience = () => {
   const features = [
     {
       icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={3}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
         </svg>
       ),
-      title: "Recetas Auténticas",
-      description: "Cada platillo sigue las recetas tradicionales alemanas transmitidas por generaciones"
+      title: "RECETAS UNDERGROUND",
+      description: "TRADICIÓN ALEMANA SIN PRETENSIONES NI POSES"
     },
     {
       icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={3}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
-      title: "Ingredientes Premium",
-      description: "Seleccionamos solo los mejores ingredientes, muchos importados directamente de Alemania"
+      title: "INGREDIENTES REALES",
+      description: "CALIDAD SIN COMPROMISO · DIRECTO DE ALEMANIA"
     },
     {
       icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={3}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
         </svg>
       ),
-      title: "Ambiente Acogedor",
-      description: "Un espacio diseñado para que disfrutes momentos especiales con familia y amigos"
+      title: "VIBE AUTÉNTICO",
+      description: "ESPACIO DISEÑADO PARA GENTE REAL · SIN FILTROS"
     }
   ];
 
   return (
-    <section id="nosotros" className="relative section-padding bg-zinc-950">
+    <section id="nosotros" className="relative section-padding bg-dark-500">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Side - Image */}
@@ -48,14 +48,14 @@ const Experience = () => {
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.5 }}
-                className="relative overflow-hidden rounded-2xl shadow-2xl"
+                className="relative overflow-hidden clip-corner shadow-2xl border-2 border-accent-500/30"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&h=1400&fit=crop"
+                  src="src/assets/img/Building.png"
                   alt="Interior del restaurante Berlín's"
-                  className="w-full h-auto object-cover"
+                  className="w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-dark-500/80 to-transparent" />
               </motion.div>
 
               {/* Decorative Elements */}
@@ -64,14 +64,14 @@ const Experience = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="absolute -bottom-6 -right-6 w-32 h-32 border-4 border-gold-600 rounded-2xl -z-10"
+                className="absolute -bottom-6 -right-6 w-32 h-32 border-4 border-accent-500 clip-corner -z-10"
               />
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="absolute -top-6 -left-6 w-32 h-32 bg-gold-600/20 rounded-2xl -z-10"
+                className="absolute -top-6 -left-6 w-32 h-32 bg-accent-500/20 clip-corner -z-10"
               />
 
               {/* Stats Badge */}
@@ -80,10 +80,10 @@ const Experience = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.5 }}
-                className="absolute bottom-8 left-8 bg-black/80 backdrop-blur-lg p-6 rounded-xl border border-gold-600/30"
+                className="absolute bottom-8 left-8 bg-dark-500/90 backdrop-blur-lg p-6 clip-corner border-2 border-accent-500"
               >
-                <p className="text-4xl font-playfair font-bold text-gold-500 mb-1">25+</p>
-                <p className="text-white/70 text-sm">Años de Tradición</p>
+                <p className="text-4xl font-display font-bold text-accent-500 mb-1">25+</p>
+                <p className="text-white/70 text-sm uppercase tracking-wider font-mono">AÑOS DE ACTITUD</p>
               </motion.div>
             </div>
           </motion.div>
@@ -101,27 +101,24 @@ const Experience = () => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-gold-500 text-sm md:text-base tracking-[0.3em] uppercase mb-4 font-light"
+              className="text-accent-500 text-sm md:text-base tracking-[0.4em] uppercase mb-4 font-bold font-mono"
             >
-              Nuestra Historia
+              /// NUESTRA HISTORIA ///
             </motion.p>
 
-            <h2 className="heading-md text-white mb-6">
-              Una Conexión Auténtica con la
-              <span className="text-gold-500"> Cultura Alemana</span>
+            <h2 className="heading-md text-white mb-6 uppercase">
+              AUTÉNTICA COMIDA
+              <br /><span className="text-accent-500">ALEMANA</span>
+              <br />SIN PRETENSIONES
             </h2>
 
             <div className="space-y-4 mb-8">
-              <p className="text-white/70 text-lg leading-relaxed">
-                Desde 1999, Berlín's ha sido el hogar de la auténtica cocina alemana en México. 
-                Nuestra pasión por mantener vivas las tradiciones culinarias de Alemania nos ha 
-                convertido en un referente gastronómico.
+              <p className="text-white/70 text-base leading-relaxed uppercase tracking-wide font-mono">
+                [ DESDE 1999 · BERLÍN'S ES LA CASA DE LA VERDADERA COCINA ALEMANA EN MÉXICO ]
               </p>
 
-              <p className="text-white/70 text-lg leading-relaxed">
-                Cada plato que servimos cuenta una historia, cada sabor es un viaje a las raíces 
-                de la cocina europea. Nuestro chef, con más de 20 años de experiencia, garantiza 
-                que cada bocado sea una experiencia inolvidable.
+              <p className="text-white/70 text-base leading-relaxed uppercase tracking-wide font-mono">
+                [ CADA PLATO CUENTA UNA HISTORIA · CADA SABOR ES UN VIAJE SIN FILTROS A LAS RAÍCES DE EUROPA ]
               </p>
             </div>
 
@@ -136,14 +133,14 @@ const Experience = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
                   className="flex items-start space-x-4 group"
                 >
-                  <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-gold-600 to-gold-500 rounded-lg flex items-center justify-center text-black group-hover:scale-110 transition-transform duration-300">
+                  <div className="flex-shrink-0 w-14 h-14 bg-accent-500 clip-corner flex items-center justify-center text-dark-500 group-hover:scale-110 group-hover:shadow-neon-yellow transition-all duration-300">
                     {feature.icon}
                   </div>
                   <div>
-                    <h3 className="text-xl font-playfair font-semibold text-white mb-1 group-hover:text-gold-500 transition-colors">
+                    <h3 className="text-xl font-display font-bold text-white mb-1 group-hover:text-accent-500 transition-colors uppercase tracking-wider">
                       {feature.title}
                     </h3>
-                    <p className="text-white/60 leading-relaxed">
+                    <p className="text-white/60 leading-relaxed text-sm uppercase tracking-wide font-mono">
                       {feature.description}
                     </p>
                   </div>
@@ -173,7 +170,7 @@ const Experience = () => {
       </div>
 
       {/* Background Decoration */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-gold-600/5 rounded-full blur-3xl -translate-y-1/2 -z-10" />
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-accent-500/5 rounded-full blur-3xl -translate-y-1/2 -z-10" />
     </section>
   );
 };
