@@ -51,7 +51,7 @@ const Experience = () => {
                 className="relative overflow-hidden clip-corner shadow-2xl border-2 border-accent-500/30"
               >
                 <img
-                  src="Buiding.png"
+                  src="Building.png"
                   alt="Interior del restaurante Berlín's"
                   className="w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 />
