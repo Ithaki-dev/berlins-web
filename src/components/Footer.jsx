@@ -49,7 +49,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-black border-t border-gold-600/20">
+    <footer className="relative bg-dark-500 border-t-2 border-accent-500">
       {/* Main Footer */}
       <div className="section-padding">
         <div className="container-custom">
@@ -61,12 +61,11 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h3 className="text-3xl font-playfair font-bold text-gold-500 mb-4">
-                Berlín's
+              <h3 className="text-3xl font-display font-bold text-accent-500 mb-4 uppercase tracking-wider">
+                BERLÍN'S
               </h3>
-              <p className="text-white/60 leading-relaxed mb-6">
-                Auténtica cocina alemana en el corazón de México. 
-                Una experiencia gastronómica única desde 1999.
+              <p className="text-white/60 leading-relaxed mb-6 uppercase text-sm tracking-wide font-mono">
+                [ AUTÉNTICA COCINA ALEMANA · ACTITUD DESDE 1999 ]
               </p>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
@@ -78,7 +77,7 @@ const Footer = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
                     whileHover={{ scale: 1.1, y: -3 }}
-                    className="w-12 h-12 bg-gold-600/10 hover:bg-gold-600 text-gold-500 hover:text-black rounded-lg flex items-center justify-center transition-all duration-300"
+                    className="w-12 h-12 bg-accent-500/20 hover:bg-accent-500 text-accent-500 hover:text-dark-500 clip-corner flex items-center justify-center transition-all duration-300 border-2 border-accent-500/50 hover:border-accent-500 hover:shadow-neon-yellow"
                     aria-label={social.name}
                   >
                     {social.icon}
@@ -94,7 +93,7 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <h4 className="text-white font-semibold text-lg mb-6">Enlaces Rápidos</h4>
+              <h4 className="text-white font-bold text-lg mb-6 uppercase tracking-wider font-mono">ENLACES</h4>
               <ul className="space-y-3">
                 {quickLinks.map((link) => (
                   <li key={link.name}>
@@ -104,7 +103,7 @@ const Footer = () => {
                         e.preventDefault();
                         scrollToSection(link.href);
                       }}
-                      className="text-white/60 hover:text-gold-500 transition-colors duration-300 inline-block"
+                      className="text-white/60 hover:text-accent-500 transition-colors duration-300 inline-block uppercase text-sm tracking-wide font-mono font-bold"
                     >
                       {link.name}
                     </a>
@@ -120,28 +119,28 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h4 className="text-white font-semibold text-lg mb-6">Contacto</h4>
+              <h4 className="text-white font-bold text-lg mb-6 uppercase tracking-wider font-mono">CONTACTO</h4>
               <ul className="space-y-4">
                 <li className="flex items-start space-x-3">
-                  <svg className="w-5 h-5 text-gold-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <svg className="w-5 h-5 text-accent-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
-                  <span className="text-white/60">
-                    Av. Principal 123<br/>Colonia Centro, CDMX
+                  <span className="text-white/60 uppercase text-sm tracking-wide font-mono">
+                    AV. PRINCIPAL 123<br/>CDMX
                   </span>
                 </li>
                 <li className="flex items-center space-x-3">
-                  <svg className="w-5 h-5 text-gold-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  <svg className="w-5 h-5 text-accent-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  <span className="text-white/60">+52 55 1234 5678</span>
+                  <span className="text-white/60 uppercase text-sm tracking-wide font-mono">+52 55 1234 5678</span>
                 </li>
                 <li className="flex items-center space-x-3">
-                  <svg className="w-5 h-5 text-gold-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  <svg className="w-5 h-5 text-accent-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  <span className="text-white/60">contacto@berlins.mx</span>
+                  <span className="text-white/60 uppercase text-sm tracking-wide font-mono">CONTACTO@BERLINS.MX</span>
                 </li>
               </ul>
             </motion.div>
@@ -153,19 +152,19 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <h4 className="text-white font-semibold text-lg mb-6">Horarios</h4>
+              <h4 className="text-white font-bold text-lg mb-6 uppercase tracking-wider font-mono">HORARIOS</h4>
               <ul className="space-y-3">
                 <li className="flex justify-between">
-                  <span className="text-white/60">Lunes - Viernes</span>
-                  <span className="text-gold-500 font-medium">1PM - 11PM</span>
+                  <span className="text-white/60 uppercase text-sm tracking-wide font-mono">LUN - VIE</span>
+                  <span className="text-accent-500 font-bold font-mono text-sm">1PM - 11PM</span>
                 </li>
                 <li className="flex justify-between">
-                  <span className="text-white/60">Sábado</span>
-                  <span className="text-gold-500 font-medium">12PM - 12AM</span>
+                  <span className="text-white/60 uppercase text-sm tracking-wide font-mono">SÁBADO</span>
+                  <span className="text-accent-500 font-bold font-mono text-sm">12PM - 12AM</span>
                 </li>
                 <li className="flex justify-between">
-                  <span className="text-white/60">Domingo</span>
-                  <span className="text-gold-500 font-medium">12PM - 10PM</span>
+                  <span className="text-white/60 uppercase text-sm tracking-wide font-mono">DOMINGO</span>
+                  <span className="text-accent-500 font-bold font-mono text-sm">12PM - 10PM</span>
                 </li>
               </ul>
             </motion.div>
@@ -179,22 +178,22 @@ const Footer = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.4 }}
-        className="border-t border-gold-600/10 py-8"
+        className="border-t-2 border-accent-500/30 py-8"
       >
         <div className="container-custom px-6 md:px-12">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-white/40 text-sm text-center md:text-left">
-              © {currentYear} Berlín's. Todos los derechos reservados.
+            <p className="text-white/40 text-sm text-center md:text-left uppercase tracking-wider font-mono">
+              © {currentYear} BERLÍN'S. TODOS LOS DERECHOS.
             </p>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-white/40 hover:text-gold-500 transition-colors">
-                Privacidad
+              <a href="#" className="text-white/40 hover:text-accent-500 transition-colors uppercase tracking-wider font-mono font-bold">
+                PRIVACIDAD
               </a>
-              <a href="#" className="text-white/40 hover:text-gold-500 transition-colors">
-                Términos
+              <a href="#" className="text-white/40 hover:text-accent-500 transition-colors uppercase tracking-wider font-mono font-bold">
+                TÉRMINOS
               </a>
-              <a href="#" className="text-white/40 hover:text-gold-500 transition-colors">
-                Cookies
+              <a href="#" className="text-white/40 hover:text-accent-500 transition-colors uppercase tracking-wider font-mono font-bold">
+                COOKIES
               </a>
             </div>
           </div>
@@ -202,7 +201,7 @@ const Footer = () => {
       </motion.div>
 
       {/* Decorative Element */}
-      <div className="absolute top-0 left-1/2 w-px h-32 bg-gradient-to-b from-gold-600/50 to-transparent -translate-x-1/2" />
+      <div className="absolute top-0 left-1/2 w-px h-32 bg-gradient-to-b from-accent-500 to-transparent -translate-x-1/2" />
     </footer>
   );
 };
