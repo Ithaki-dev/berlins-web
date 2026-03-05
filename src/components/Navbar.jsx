@@ -18,6 +18,7 @@ const Navbar = () => {
     { name: 'Inicio', href: '#inicio' },
     { name: 'Menú', href: '#menu' },
     { name: 'Nosotros', href: '#nosotros' },
+    { name: 'Festivals', href: '#festivals' },
     { name: 'Galería', href: '#galeria' },
     { name: 'Reservas', href: '#reservas' },
   ];
@@ -37,12 +38,12 @@ const Navbar = () => {
       transition={{ duration: 0.6 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-black/80 backdrop-blur-lg shadow-2xl border-b border-gold-600/20'
+          ? 'bg-dark-500/95 backdrop-blur-md shadow-lg border-b-2 border-accent-500'
           : 'bg-transparent'
       }`}
     >
       <div className="container-custom px-6 md:px-12">
-        <div className="flex items-center justify-between h-20 md:h-24">
+        <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -52,7 +53,7 @@ const Navbar = () => {
               e.preventDefault();
               scrollToSection('#inicio');
             }}>
-              <h1 className="text-2xl md:text-3xl font-playfair font-bold text-gold-500">
+              <h1 className="text-3xl md:text-4xl font-display font-bold text-accent-500 uppercase tracking-wider">
                 Berlín's
               </h1>
             </a>
@@ -71,7 +72,7 @@ const Navbar = () => {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="text-white/80 hover:text-gold-500 transition-colors duration-300 font-medium tracking-wide"
+                className="text-white/90 hover:text-accent-500 transition-colors duration-200 font-bold uppercase tracking-wider text-sm border-b-2 border-transparent hover:border-accent-500"
                 whileHover={{ scale: 1.1 }}
               >
                 {link.name}
@@ -82,7 +83,7 @@ const Navbar = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => scrollToSection('#reservas')}
-              className="btn-primary"
+              className="btn-primary text-sm"
             >
               Reservar Mesa
             </motion.button>
@@ -90,16 +91,16 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-white/80 hover:text-gold-500 transition-colors"
+            className="lg:hidden text-white/90 hover:text-accent-500 transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
             <svg
-              className="w-6 h-6"
+              className="w-8 h-8"
               fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
+              strokeLinecap="square"
+              strokeLinejoin="miter"
+              strokeWidth="3"
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
@@ -120,9 +121,9 @@ const Navbar = () => {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden overflow-hidden"
+              className="lg:hidden overflow-hidden bg-dark-500/95 border-t-2 border-accent-500"
             >
-              <div className="py-4 space-y-4">
+              <div className="py-4 space-y-2">
                 {navLinks.map((link, index) => (
                   <motion.a
                     key={link.name}
@@ -134,7 +135,7 @@ const Navbar = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    className="block text-white/80 hover:text-gold-500 transition-colors duration-300 font-medium py-2"
+                    className="block text-white/90 hover:text-accent-500 hover:bg-white/5 transition-colors duration-200 font-bold uppercase tracking-wider py-3 px-4 border-l-4 border-transparent hover:border-accent-500"
                   >
                     {link.name}
                   </motion.a>
@@ -144,7 +145,8 @@ const Navbar = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.5 }}
                   onClick={() => scrollToSection('#reservas')}
-                  className="btn-primary w-full"
+                  className="btn-primary w-full mx-4 text-sm"
+                  style={{ width: 'calc(100% - 2rem)' }}
                 >
                   Reservar Mesa
                 </motion.button>
