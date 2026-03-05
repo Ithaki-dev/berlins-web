@@ -1,10 +1,12 @@
+const img = (filename) => `${import.meta.env.BASE_URL}assets/img/${filename}`;
+
 export const festivalsData = [
   {
     id: 1,
     name: "ROCK EN DEUTSCH",
     date: "15 MARZO 2025",
     location: "BERLÍN'S PLAZA",
-    image: "/assets/img/festivals_1.png",
+    image: img('festivals_1.png'),
     description: "ROCK ALEMÁN · CERVEZA · SCHNITZEL"
   },
   {
@@ -12,7 +14,7 @@ export const festivalsData = [
     name: "OKTOBERFEST MÉXICO",
     date: "20 SEPTIEMBRE 2025",
     location: "BERLÍN'S PLAZA",
-    image: "/assets/img/festivals_1.png",
+    image: img('festivals_1.png'),
     description: "CERVEZA · BRATWURST · PRETZELS"
   },
   {
@@ -20,7 +22,7 @@ export const festivalsData = [
     name: "INDUSTRIAL NIGHTS",
     date: "10 NOVIEMBRE 2025",
     location: "BERLÍN'S UNDERGROUND",
-    image: "/assets/img/festivals_1.png",
+    image: img('festivals_1.png'),
     description: "ELECTRÓNICA · PUNK · UNDERGROUND"
   }
 ];
