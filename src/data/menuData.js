@@ -5,7 +5,7 @@ export const menuItems = [
     description: "Tradicional escalope empanizado, servido con puré de papa y ensalada fresca",
     price: "$285",
     category: "Plato Principal",
-    image: "src/assets/img/Schnitzel_cerdo.jpg"
+    image: "/assets/img/Schnitzel_cerdo.jpg"
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const menuItems = [
     description: "Salchicha artesanal con chucrut fermentado y mostaza de grano",
     price: "$195",
     category: "Plato Principal",
-    image: "src/assets/img/Bratwurst.jpg"
+    image: "/assets/img/Bratwurst.jpg"
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const menuItems = [
     description: "Horneado al momento, con mantequilla de hierbas y sal marina",
     price: "$125",
     category: "Entrada",
-    image: "src/assets/img/Pretzel.jpg"
+    image: "/assets/img/Pretzel.jpg"
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export const menuItems = [
     description: "Masa hojaldrada rellena de manzanas caramelizadas, servido con helado de vainilla",
     price: "$145",
     category: "Postre",
-    image: "src/assets/img/Strudel_manzana.jpg"
+    image: "/assets/img/Strudel_manzana.jpg"
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ export const menuItems = [
     description: "Selección de cervezas importadas directamente de Baviera",
     price: "$85",
     category: "Bebida",
-    image: "src/assets/img/Alus-1.png"
+    image: "/assets/img/Alus-1.png"
   },
   {
     id: 6,
